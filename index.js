@@ -18,6 +18,10 @@
         }
         Runner.instance_ = this;
 
+        this.unlockThreshold = 1000;
+        this.unlockMessage = 'You are invited!';
+        this.unlockHref = 'https://sherlocked.nl/';
+
         this.outerContainerEl = document.querySelector(outerContainerId);
         this.containerEl = null;
         this.snackbarEl = null;
@@ -523,6 +527,14 @@
             this.time = now;
 
             if (this.playing) {
+
+                if (this.distanceMeter.getActualDistance(this.distanceRan) > this.unlockThreshold) {
+                    if (window.confirm(this.unlockMessage)) 
+                    {
+                    window.location.href=this.unlockHref;
+                    };
+                }
+
                 this.clearCanvas();
 
                 if (this.tRex.jumping) {
