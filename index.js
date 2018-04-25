@@ -18,9 +18,9 @@
         }
         Runner.instance_ = this;
 
-        this.unlockThreshold = 1000;
-        this.unlockMessage = 'You are invited!';
-        this.unlockHref = 'https://sherlocked.nl/';
+        this.unlockThreshold = 1992;
+        this.unlockMessage = 'Welcome Agent Boon. Mission UNICORN unlocked. Ready to Begin?';
+        this.unlockHref = 'http://bit.ly/boon-mission-unlocked';
 
         this.outerContainerEl = document.querySelector(outerContainerId);
         this.containerEl = null;
